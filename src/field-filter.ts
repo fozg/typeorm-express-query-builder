@@ -48,7 +48,7 @@ export class FieldFilter extends AbstractFilter {
         break;
       case LookupFilter.BETWEEN:
         const rangeValues = this.value.split(',');
-        queryToAdd = { [this.prop]: Between(+rangeValues[0], +rangeValues[1]) };
+        queryToAdd = { [this.prop]: Between(rangeValues[0], rangeValues[1]) };
         break;
     }
     if(this.notOperator) {
